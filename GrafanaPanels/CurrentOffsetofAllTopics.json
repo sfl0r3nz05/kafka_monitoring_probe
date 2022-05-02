@@ -1,0 +1,90 @@
+{
+  "id": 4,
+  "gridPos": {
+    "h": 8,
+    "w": 12,
+    "x": 12,
+    "y": 8
+  },
+  "type": "timeseries",
+  "title": "Current offset of all topics",
+  "description": "Describe current offset of data records in each topic",
+  "fieldConfig": {
+    "defaults": {
+      "custom": {
+        "drawStyle": "line",
+        "lineInterpolation": "smooth",
+        "barAlignment": 0,
+        "lineWidth": 1,
+        "fillOpacity": 0,
+        "gradientMode": "none",
+        "spanNulls": false,
+        "showPoints": "auto",
+        "pointSize": 5,
+        "stacking": {
+          "mode": "none",
+          "group": "A"
+        },
+        "axisPlacement": "auto",
+        "axisLabel": "",
+        "scaleDistribution": {
+          "type": "linear"
+        },
+        "hideFrom": {
+          "tooltip": false,
+          "viz": false,
+          "legend": false
+        },
+        "thresholdsStyle": {
+          "mode": "off"
+        },
+        "lineStyle": {
+          "fill": "solid"
+        }
+      },
+      "color": {
+        "mode": "palette-classic"
+      },
+      "mappings": [],
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          {
+            "color": "green",
+            "value": null
+          },
+          {
+            "color": "red",
+            "value": 80
+          }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "options": {
+    "tooltip": {
+      "mode": "single",
+      "sort": "none"
+    },
+    "legend": {
+      "displayMode": "hidden",
+      "placement": "bottom",
+      "calcs": []
+    }
+  },
+  "targets": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "Trrt-gbnk"
+      },
+      "exemplar": true,
+      "expr": "{instance=\"localhost:9308\",job=\"kafka\",topic=~\"Apr01|Apr02|Apr08|Feb28|Jan16|Jan17|Jan21|Jan25|Jan28|Mar01|Mar03\"}",
+      "interval": "",
+      "legendFormat": "",
+      "refId": "A"
+    }
+  ],
+  "datasource": null
+}

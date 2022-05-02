@@ -1,0 +1,94 @@
+{
+  "id": 6,
+  "gridPos": {
+    "h": 8,
+    "w": 12,
+    "x": 0,
+    "y": 8
+  },
+  "type": "timeseries",
+  "title": "Monitor to topic Apr08",
+  "fieldConfig": {
+    "defaults": {
+      "custom": {
+        "drawStyle": "line",
+        "lineInterpolation": "linear",
+        "barAlignment": 1,
+        "lineWidth": 1,
+        "fillOpacity": 0,
+        "gradientMode": "opacity",
+        "spanNulls": false,
+        "showPoints": "always",
+        "pointSize": 5,
+        "stacking": {
+          "mode": "none",
+          "group": "A"
+        },
+        "axisPlacement": "auto",
+        "axisLabel": "",
+        "scaleDistribution": {
+          "type": "linear"
+        },
+        "hideFrom": {
+          "tooltip": false,
+          "viz": false,
+          "legend": false
+        },
+        "thresholdsStyle": {
+          "mode": "off"
+        }
+      },
+      "color": {
+        "mode": "palette-classic"
+      },
+      "mappings": [],
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          {
+            "color": "green",
+            "value": null
+          },
+          {
+            "color": "red",
+            "value": 80
+          }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "options": {
+    "tooltip": {
+      "mode": "single",
+      "sort": "none"
+    },
+    "legend": {
+      "displayMode": "hidden",
+      "placement": "bottom",
+      "calcs": []
+    }
+  },
+  "targets": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "Trrt-gbnk"
+      },
+      "exemplar": true,
+      "expr": "{instance=\"localhost:9308\",job=\"kafka\",topic=\"Apr08\"}",
+      "interval": "",
+      "legendFormat": "",
+      "refId": "A"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "Trrt-gbnk"
+      },
+      "hide": false,
+      "refId": "B"
+    }
+  ],
+  "datasource": null
+}
