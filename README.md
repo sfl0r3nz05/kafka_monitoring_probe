@@ -1,6 +1,10 @@
 # Welcome, get to know my final project through this file.
 From technical perspective, the purpose of this project is to build a system that integrates Tcpdump, Kafka subscription system and ELK (Logstash, Elasticsearch and Kibana). The system is able to capture network data traffic flow that go through local internet, to transform the captured data to analysable format at local, to transmit the captured data to Kafka brokers from local, to subscribe information from Kafka subscription system by Logstash, to store subscribed information to Elasticsearch and to use Kibana to monitor and visualize the data stored in Elasticsearch.
 
+## Project Documentation
+
+Download the final report associated to this project [here](./documentation/Guo%20Mudong_2018213067_FinalReport.pdf)
+
 ## Project Architecture
 
 ![alt text](./documentation/architecture_0125.png)
