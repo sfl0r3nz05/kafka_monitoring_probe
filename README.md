@@ -3,7 +3,7 @@ From technical perspective, the purpose of this project is to build a system tha
 
 ## Project Documentation
 
-Download the final report associated to this project [here](./documentation/Guo_20Mudong_2018213067_FinalReport.pdf).
+Download the final report associated to this project [here](./documentation/Guo_Mudong_2018213067_FinalReport.pdf).
 
 ## Project Architecture
 
